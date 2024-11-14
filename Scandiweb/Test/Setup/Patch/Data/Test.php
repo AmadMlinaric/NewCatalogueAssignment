@@ -67,7 +67,7 @@ class Test implements DataPatchInterface
      * @var EavSetup
      */
     protected EavSetup $eavSetup;
-    
+
     /**
      * @var CategoryLinkManagementInterface
      */
@@ -87,27 +87,28 @@ class Test implements DataPatchInterface
      * @param SourceItemsSaveInterface $sourceItemsSaveInterface
      * @param State $appState
      * @param StoreManagerInterface $storeManager
-		 * @param EavSetup $eavSetup
+     * @param EavSetup $eavSetup
      * @param CategoryLinkManagementInterface $categoryLink
      */
     public function __construct(
-        ProductInterfaceFactory $productInterfaceFactory,
-        ProductRepositoryInterface $productRepository,
-        State $appState,
-        StoreManagerInterface $storeManager,
-        EavSetup $eavSetup,
-				SourceItemInterfaceFactory $sourceItemFactory,
-        SourceItemsSaveInterface $sourceItemsSaveInterface,
-				CategoryLinkManagementInterface $categoryLink
-    ) {
+        ProductInterfaceFactory         $productInterfaceFactory,
+        ProductRepositoryInterface      $productRepository,
+        State                           $appState,
+        StoreManagerInterface           $storeManager,
+        EavSetup                        $eavSetup,
+        SourceItemInterfaceFactory      $sourceItemFactory,
+        SourceItemsSaveInterface        $sourceItemsSaveInterface,
+        CategoryLinkManagementInterface $categoryLink
+    )
+    {
         $this->appState = $appState;
         $this->productInterfaceFactory = $productInterfaceFactory;
         $this->productRepository = $productRepository;
-				$this->eavSetup = $eavSetup;
+        $this->eavSetup = $eavSetup;
         $this->storeManager = $storeManager;
         $this->sourceItemFactory = $sourceItemFactory;
         $this->sourceItemsSaveInterface = $sourceItemsSaveInterface;
-				$this->categoryLink = $categoryLink;
+        $this->categoryLink = $categoryLink;
     }
 
     /**
@@ -135,11 +136,12 @@ class Test implements DataPatchInterface
 
         $attributeSetId = $this->eavSetup->getAttributeSetId(Product::ENTITY, 'Default');
         $websiteIDs = [$this->storeManager->getStore()->getWebsiteId()];
-				$product->setTypeId(Type::TYPE_SIMPLE)
+        $product
+            ->setTypeId(Type::TYPE_SIMPLE)
             ->setWebsiteIds($websiteIDs)
             ->setAttributeSetId($attributeSetId)
             ->setName('Bicycle')
-						->setUrlKey('bicycle')
+            ->setUrlKey('bicycle')
             ->setSku('bicycle')
             ->setPrice(9.99)
             ->setVisibility(Visibility::VISIBILITY_BOTH)
