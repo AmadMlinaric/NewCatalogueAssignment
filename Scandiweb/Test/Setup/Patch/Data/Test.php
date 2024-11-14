@@ -1,8 +1,8 @@
 <?php
 /**
- * @category    Example
- * @package     Example_Migration
- * @author      First Aizsils <info@scandiweb.com>
+ * @category    Scandiweb
+ * @package     Scandiweb_Test
+ * @author      Amad Mlinaric <amad.mlianric@scandiweb.com>
  * @copyright   Copyright (c) 2021 Scandiweb, Ltd (https://scandiweb.com)
  */
 
