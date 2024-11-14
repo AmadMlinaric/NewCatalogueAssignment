@@ -3,7 +3,7 @@
  * @category    Scandiweb
  * @package     Scandiweb_Test
  * @author      Amad Mlinaric <amad.mlianric@scandiweb.com>
- * @copyright   Copyright (c) 2021 Scandiweb, Ltd (https://scandiweb.com)
+ * @copyright   Copyright (c) 2024 Scandiweb, Ltd (https://scandiweb.com)
  */
 
 namespace Scandiweb\Test\Setup\Patch\Data;
